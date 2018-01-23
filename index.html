@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+
+function calculate() {
+    
+    var min = document.getElementById("length").value;
+    var speed = document.getElementById("speed").value;
+    var photos = document.getElementById("photos").value;
+    
+    var radios = document.getElementsByName("selection");
+    
+    for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+            if (radios[i].value == "length") {
+                min = "";
+                document.getElementById("length").value = (photos * speed) / 60;
+                
+            } else if (radios[i].value == "speed") {
+                speed = "";
+                document.getElementById("speed").value = (min * 60) / photos;
+                
+            } else if (radios[i].value == "photos") {
+                photos = "";
+                document.getElementById("photos").value = (min * 60) / speed;
+            }
+            break;
+        }
+    }
+    
+
+    
+    
+}
+
+</script>
+
+</head>
+<title>Time Lapse Calculator</title>
+<body>
+    <h1>Time Lapse Calculator</h1>
+    
+    <p>What do you want to calculate?</p>
+    
+    <form action="">
+        <input type="radio" name="selection" value="length" id="lengthOption"> Length in minutes
+        <input type="radio" name="selection" value="speed" id="speedOption"> Seconds wait per photo 
+        <input type="radio" name="selection" value="photos" id="photosOption" checked="checked"> Number of photos
+    </form>
+    
+    <input type="text" Id="length" placeholder="Length in minutes">
+    <input type="text" Id="speed" placeholder="Photos per minute">
+    <input type="text" Id="photos" placeholder="Number of photos">
+    
+    <button type="button" onclick="calculate()"> Submit </button>
+    
+</body>
+</html>
