@@ -16,7 +16,7 @@ function calculate() {
         if (radios[i].checked) {
             if (radios[i].value == "length") {
                 min = "";
-                document.getElementById("length").value = (photos * speed) / 60;
+                document.getElementById("length").value = (photos / speed);
                 
             } else if (radios[i].value == "speed") {
                 speed = "";
