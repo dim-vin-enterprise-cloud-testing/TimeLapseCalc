@@ -16,15 +16,15 @@ function calculate() {
         if (radios[i].checked) {
             if (radios[i].value == "length") {
                 min = "";
-                document.getElementById("length").value = (photos / speed);
+                document.getElementById("length").value = photos / speed;
                 
             } else if (radios[i].value == "speed") {
                 speed = "";
-                document.getElementById("speed").value = (min * 60) / photos;
+                document.getElementById("speed").value = photos / min;
                 
             } else if (radios[i].value == "photos") {
                 photos = "";
-                document.getElementById("photos").value = (min * 60) / speed;
+                document.getElementById("photos").value = (min * speed);
             }
             break;
         }
