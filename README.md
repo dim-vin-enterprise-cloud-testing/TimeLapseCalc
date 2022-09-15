@@ -2,4 +2,4 @@
 
 Helps plan time lapses
 
-https://yevrap.github.io/TimeLapseCalc/
+https://dim-vin-enterprise-cloud-testing.github.io/TimeLapseCalc/
